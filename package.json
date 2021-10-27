@@ -1,7 +1,6 @@
 {
   "name": "Module15-NFTC",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +17,15 @@
     "express-session": "^1.17.2",
     "mysql2": "^2.3.2",
     "sequelize": "^6.8.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhil-kharbanda/UofT_NFTC.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nikhil-kharbanda/UofT_NFTC/issues"
+  },
+  "homepage": "https://github.com/nikhil-kharbanda/UofT_NFTC#readme",
+  "description": ""
 }
