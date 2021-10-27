@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS ntfc_db;
+CREATE DATABASE ntfc_db;
