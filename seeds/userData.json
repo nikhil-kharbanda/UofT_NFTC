@@ -1,7 +1,7 @@
 [
     {
-        "userName": "Nick",
+        "name": "Nick",
         "email": "nik22cool@hotmail.com",
-        "pWord": "123456789"
+        "password": "123456789"
     }
 ]
