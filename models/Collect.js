@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Collect extends Model {}
 
-Project.init(
+Collect.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,18 +11,25 @@ Project.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    description: {
+    collectName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    content: {
       type: DataTypes.STRING,
       allowNull: false
     },
     imageTag: {
       type: DataTypes.STRING,
-      allowNull: false,
-      
     },
-    memberID: {
+    dateCreated: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    userId: {
       type: DataTypes.INTEGER,
-      references: {
+        references: {
         model: 'user',
         key: 'id',
       },
@@ -37,4 +44,4 @@ Project.init(
   }
 );
 
-module.exports =Collect ;
+module.exports = Collect ;

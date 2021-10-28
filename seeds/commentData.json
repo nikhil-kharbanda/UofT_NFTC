@@ -1,0 +1,22 @@
+[
+    {
+        "content": "Very interesting collection Nick, I like.",
+        "userId": 4,
+        "collectId": 1
+    },
+    {
+        "content": "Impressive collection Micheal, I like.",
+        "userId": 3,
+        "collectId": 2
+    },
+    {
+        "content": "Amar, where did you get those NFT.",
+        "userId": 2,
+        "collectId":3
+    },  
+    {
+        "content": "Only idiots have this crap.",
+        "userId": 3,
+        "collectId": 4
+    }
+]

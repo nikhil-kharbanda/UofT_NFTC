@@ -1,7 +1,22 @@
 [
     {
-        "name": "Nick",
+        "userName": "Nick",
         "email": "nik22cool@hotmail.com",
+        "password": "123456789"
+    },
+    {
+        "userName": "Amar",
+        "email": "Amar@hotmail.com",
+        "password": "123456789"
+    },
+    {
+        "userName": "Michael",
+        "email": "Artist@hotmail.com",
+        "password": "123456789"
+    },   
+    {
+        "userName": "Phil",
+        "email": "Phil@hotmail.com",
         "password": "123456789"
     }
 ]

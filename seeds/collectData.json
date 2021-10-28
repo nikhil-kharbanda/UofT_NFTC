@@ -1,0 +1,26 @@
+[
+    {
+        "collectName": "Nick",
+        "content": "Nick's Wonderful World of NFT's",
+        "imageTag": "./images/img1.png",
+        "userId": 1
+    },
+    {
+        "collectName": "Michael",
+        "content": "Michael's Explosive NFT's",
+        "imageTag": "./images/img2.png",
+        "userId": 2
+    },
+    {
+        "collectName": "Amar",
+        "content": "Amar's Impressive NFT Collection",
+        "imageTag": "./images/img3.png",
+        "userId": 3
+    },   
+    {
+        "collectName": "Phil",
+        "content": "Phil's NFT Collection has grown",
+        "imageTag": "./images/img4.png",
+        "userId": 4
+    }
+]
