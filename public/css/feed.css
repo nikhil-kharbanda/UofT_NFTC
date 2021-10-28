@@ -324,55 +324,9 @@ main .container .right {
     background: var(--color-white);
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
+    display: none;
 }
 
-.right .messages .heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-
-.right .messages i {
-    font-size: 1.4rem;
-    cursor: pointer;
-}
-
-.right .messages .search-bar {
-    display: flex;
-    margin-bottom: 1rem;
-}
-
-.right .messages .category {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-
-
-.right .messages .message {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    align-items: start;
-}
-
-.right .message .profile-photo {
-    position: relative;
-    overflow: visible;
-}
-
-.right .profile-photo img {
-    border-radius: 50%;
-}
-
-.right .messages .message:last-child {
-    margin: 0;
-}
-
-.right .messages .message p {
-    font-size: 0.8rem;
-}
 
 /* THEME CUSTOMIZATION  */
 .theme {
