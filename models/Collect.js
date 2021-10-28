@@ -11,20 +11,16 @@ Project.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    desscription: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     description: {
       type: DataTypes.STRING,
+      allowNull: false
     },
-    imagetag: {
+    imageTag: {
       type: DataTypes.STRING,
       allowNull: false,
       
     },
-    
-    member_id: {
+    memberID: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
