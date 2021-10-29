@@ -321,9 +321,6 @@ main .container .right {
 }
 
 .right .messages {
-    background: var(--color-white);
-    border-radius: var(--card-border-radius);
-    padding: var(--card-padding);
     display: none;
 }
 

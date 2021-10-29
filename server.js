@@ -55,6 +55,14 @@ app.get("/feed", (req, res) => {
   });
 });
 
+app.get("/profile", (req, res) => {
+  res.render("profile", {
+    title: "profile",
+    style: "feed.css",
+    exStyle: "https://unicons.iconscout.com/release/v2.1.6/css/unicons.css",
+    script: "index.js"
+  });
+});
 // app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
