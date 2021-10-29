@@ -12,5 +12,6 @@ async function logout() {
       alert(response.statusText);
     }
   }
+
   console.log('the logout is here')
   document.querySelector('#logout').addEventListener('click', logout);
