@@ -6,7 +6,7 @@ const feedRoutes = require('./feedRoutes');
 //const commentRoutes = require('./commentRoutes');
 
 router.use("/users", userRoutes);
-router.use("/collectRoutes", collectRoutes);
+// router.use("/collectRoutes", collectRoutes);
 // router.use("/commentRoutes", commentRoutes);
 
 router.use('/users', userRoutes);

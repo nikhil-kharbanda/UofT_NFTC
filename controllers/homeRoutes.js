@@ -7,7 +7,7 @@ router.get("/feed", withAuth, async (req, res) => {
       title: "feed",
       style: "feed.css",
       exStyle: "https://unicons.iconscout.com/release/v2.1.6/css/unicons.css",
-      scripts: [{script:"index.js"},{script:'logout.js'}],
+      scripts: [{ script: "index.js" }, { script: "logout.js" }],
 
       logged_in: req.session.logged_in,
     });
@@ -16,9 +16,9 @@ router.get("/feed", withAuth, async (req, res) => {
   }
 });
 
-router.get('/',(req,res)=>{
-  res.redirect('/feed')
-})
+router.get("/", (req, res) => {
+  res.redirect("/feed");
+});
 
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
@@ -29,16 +29,15 @@ router.get("/login", (req, res) => {
   res.render("index", {
     title: "Sign in",
     style: "style.css",
-    scripts:[ {script:"login.js"}],
+    scripts: [{ script: "login.js" }],
   });
 });
 
 router.get("/signup", (req, res) => {
-  
   res.render("signup", {
     title: "Sign up",
     style: "style.css",
-    scripts:[ {script:"signup.js"}]
+    scripts: [{ script: "signup.js" }],
   });
 });
 
