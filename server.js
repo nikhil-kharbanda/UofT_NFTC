@@ -33,6 +33,17 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
+//TODO: put this in route handler
+app.get("/profile", (req, res) => {
+  res.render("profile", {
+    title: "profile",
+    style: "feed.css",
+    exStyle: "https://unicons.iconscout.com/release/v2.1.6/css/unicons.css",
+    script: "index.js"
+  });
+});
+// app.use(routes);
+
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
