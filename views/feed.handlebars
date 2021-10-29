@@ -4,13 +4,12 @@
             <h2 class="log">
                 NFT Collect
             </h2>
-            <!-- <img src="./images/NFTCollect.SVG" class="log" alt=""> -->
             <div class="search-bar">
                 <i class="uil uil-search"></i>
                 <input type="search" placeholder="Search For NFT Collectors">
             </div>
             <div class="create">
-                <label class="btn btn-primary" for="create-post">Create Post</label>
+
                 <div class="profile-photo">
                     <img src="https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600">
                 </div>
@@ -82,10 +81,43 @@
                                 <span><i class="uil uil-comment-dots"></i></span>
                             </div>
                         </div>
-                        <div class="liked-by">
-                            <p>Liked by 2,323 users</b></p>
+                        <div class="caption">
+                            <p><b>NFT Billionaire</b> Lorem ipsum dolor sit quisquam eius. <span class="harsh-tag">#mynft</span></p>
+                        </div>
+                        <form class="create-post">
+                    <div class="profile-photo">
+                    <img src="https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600">
+                    </div>
+                    <input type="text" placeholder="Type your comment" id="create-post">
+                    <input type="submit" value="Comment" class="btn btn-primary">
+                </form>
+                    </div>
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600">
+                                </div>
+                                <div class="ingo">
+                                    <h3>@NFTGuy</h3>
+                                    <small>5 MINUTES AGO</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
                         </div>
 
+                        <div class="photo">
+                            <img src="https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600">
+                        </div>
+
+                        <div class="action-buttons">
+                            <div class="interaction-buttons">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                            </div>
+                        </div>
                         <div class="caption">
                             <p><b>NFT Billionaire</b> Lorem ipsum dolor sit quisquam eius. <span class="harsh-tag">#mynft</span></p>
                         </div>
@@ -105,28 +137,27 @@
             <div class="right">
                 <div class="messages">
                     <div class="heading">
-                        <h4>Messages</h4><a><i class="uil uil-edit"></i></a>
                     </div>
-                    <!-- SEARCH BAR -->
+                    <!-- Upload photo form -->
                     <div class="search-bar">
-                        <i class="uil uil-search"></i>
-                        <input type="search" placeholder="Search messages" id="message-search">
-                    </div>
-                    <!-- MESSAGE -->
-                    <div class="message">
-                        <div class="profile-photo">
-                            <img src="https://lh3.googleusercontent.com/1Dx5YdEIye1Sw6-TWq3y45Qre6KN1abp09UattqurmYtt8JPQLsKUE3Elyoj6d4M7TcunTD5vtKkdmwPPPQfnqgkw8U7lJNbljJE_w=w600">
-                        </div>
-                        <div class="message-body">
-                            <h5>@imPoor</h5>
-                            <p class="text-muted">Sick ape bro</p>
-                        </div>
+                        <form action="/" method="POST" encType="multipart/form-data" id="search">
+                        <h3>Upload New Photo</h3>
+                        <input type="file" name="sampleFile" accept="image/*" id="fileBtn"/>
+                        <label id="fileBtnLabel" for="fileBtn"><i class="uil uil-upload"></i>Choose File </label>
+                        <br>
+                        <span>
+                            <strong id="file-name">Chosen File:</strong>
+                            <span id="file-name-file">None</span>
+                        </span>
+                        <br>
+                        <textarea type="textarea" name="description" id="textDesc" placeholder="Type Description Here"></textarea>
+                        <br>
+                        <input type="submit" class="btn btn-primary">
+                        
                     </div>
                 </div>
-
                 </div>
             </div>
-
         </div>
     </main>
 
