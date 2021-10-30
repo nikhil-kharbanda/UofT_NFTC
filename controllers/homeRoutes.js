@@ -49,7 +49,8 @@ router.get("/feed", withAuth, async (req, res) => {
 //   }
 // })
 
-router.get('/feed', async (req, res) => {
+router.get('/feed',  async (req, res) => {  
+
   try {
     const collects = await Collect.findAll({
     
