@@ -310,7 +310,7 @@ input[type="file"]{
 
 #fileBtnLabel {
     display: inline-block;
-    padding: 10px 0px;
+    padding: 10px 3px;
     font-weight: 500;
     cursor: pointer;
     transition: all 300ms ease;
@@ -334,6 +334,10 @@ input[type="file"]{
     padding-top: 10px;
     padding-bottom: 10px;
     resize: none;
+}
+
+#textDesc::placeholder{
+    font-family: "Poppins", sans-serif;
 }
 
 /* THEME CUSTOMIZATION  */
