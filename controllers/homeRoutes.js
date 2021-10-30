@@ -2,20 +2,20 @@ const router = require("express").Router();
 const withAuth = require("../utils/auth");
 const { Collect, User, Comment } = require('../models');
 
-router.get("/feed", withAuth, async (req, res) => {
-  try {
-    res.render("feed", {
-      title: "feed",
-      style: "feed.css",
-      exStyle: "https://unicons.iconscout.com/release/v2.1.6/css/unicons.css",
-      scripts: [{ script: "index.js" }, { script: "logout.js" }],
-      logged_in: req.session.logged_in,
-    });
+// router.get("/feed", withAuth, async (req, res) => {
+//   try {
+//     res.render("feed", {
+//       title: "feed",
+//       style: "feed.css",
+//       exStyle: "https://unicons.iconscout.com/release/v2.1.6/css/unicons.css",
+//       scripts: [{ script: "index.js" }, { script: "logout.js" }],
+//       logged_in: req.session.logged_in,
+//     });
     
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 // router.get('/', withAuth, async (req, res) => {
 //   try {
 //     const newCollect = await Collect.findAll({
@@ -49,7 +49,7 @@ router.get("/feed", withAuth, async (req, res) => {
 //   }
 // })
 
-router.get('/feed',  async (req, res) => {  
+router.get('/feed', withAuth,  async (req, res) => {  
 
   try {
     const collects = await Collect.findAll({
@@ -90,10 +90,10 @@ router.get('/feed',  async (req, res) => {
  });
 
 router.get("/login", (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect("/feed");
-    return;
-  }
+  // if (req.session.logged_in) {
+  //   res.redirect("/feed");
+  //   return;
+  // }
 
   res.render("index", {
     title: "Sign in",
@@ -101,6 +101,7 @@ router.get("/login", (req, res) => {
     scripts: [{ script: "login.js" }],
   });
 });
+
 
 router.get("/signup", (req, res) => {
   res.render("signup", {
