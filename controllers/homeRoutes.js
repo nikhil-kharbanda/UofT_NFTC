@@ -77,7 +77,7 @@ router.get('/feed', withAuth,  async (req, res) => {
        style: "feed.css",
        exStyle: "https://unicons.iconscout.com/release/v2.1.6/css/unicons.css",
        scripts: [{ script: "index.js" }, { script: 'logout.js' }],
-      // logged_in: req.session.logged_in
+       user_id:req.session.user_id
     });
     // console.log(collects);
   } catch (err) {
