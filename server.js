@@ -50,7 +50,8 @@ app.get("/profile", (req, res) => {
     script: "index.js"
   });
 });
-// app.use(routes);
+
+app.use(routes);
 
 
 // app.get('/', (req, res) => {
