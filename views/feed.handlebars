@@ -68,8 +68,8 @@
                                     src="https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600">
                                 --}}
                             </div>
-                            <div class="ingo">
-                                <h3>{{user.UserName}}</h3>
+                            <div>
+                                <h3>{{user.userName}}</h3>
                                 <small>{{data.collectName}} on {{format_date data.dateCreated}}</small>
 
                             </div>
@@ -95,8 +95,8 @@
                         <p>Liked by 2,323 users</b></p>
                     </div>
                     <div class="caption">
-                        <p><b>{{data.collectName}} by {{user.userName}} </b> {{data.content}} <span
-                                class="harsh-tag">#mynft</span></p>
+                        <p><b>{{data.collectName}} by {{user.userName}} </b> {{data.content}} <span</p>
+                        <p><b>{{user.userName}}</b> - {{data.comments.content}}</p>
                     </div>
                     <form class="create-post">
                         <div class="profile-photo">
@@ -106,7 +106,7 @@
                         <input type="text" placeholder="Type your comment" id="create-comment">
                         <input type="submit" value="Comment" class="btn btn-primary">
                         {{!-- {{comments.content}} --}}
-                        <p>{{data.comments.content}}</p>
+                        
                     </form>
                 </div>
                 {{/each}}

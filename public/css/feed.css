@@ -549,7 +549,7 @@ input[type="file"]{
     }
 
     main .container .right {
-        /* display: inline-flex; */
+        display: none;
     }
 
     .theme .card {
