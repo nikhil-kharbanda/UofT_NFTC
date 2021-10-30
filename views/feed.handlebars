@@ -65,14 +65,16 @@
             <div class="middle">
                 <!--Posts-->
                 <div class="feeds">
+                    {{#each collects as | data |}}
                     <div class="feed">
+                       
                         <div class="head">
                             <div class="user">
                                 <div class="profile-photo">
                                     <img src="https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600">
                                 </div>
                                 <div class="ingo">
-                                    <h3>@NFTGuy</h3>
+                                    <h3>{{data.collectName}}</h3>
                                     <small>5 MINUTES AGO</small>
                                 </div>
                             </div>
@@ -82,7 +84,7 @@
                         </div>
                         
                         <div class="photo">
-                            <img src="https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600">
+                            <img src="{{data.imageTag}}">
                         </div>
 
                         <div class="action-buttons">
@@ -102,6 +104,45 @@
                     <input type="submit" value="Comment" class="btn btn-primary">
                 </form>
                     </div>
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600">
+                                </div>
+                                <div class="ingo">
+                                    <h3>@NFTGuy</h3>
+                                    <small>5 MINUTES AGO</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+
+
+                        <div class="photo">
+                            <img src="https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600">
+                        </div>
+
+                        <div class="action-buttons">
+                            <div class="interaction-buttons">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <p><b>{{data.collectName}}</b> {{data.content}} <span class="harsh-tag">#mynft</span></p>
+                        </div>
+                        <form class="create-post">
+                    <div class="profile-photo">
+                    {{!-- <img src="https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600"> --}}
+                    </div>
+                    <input type="text" placeholder="Type your comment" id="create-post">
+                    <input type="submit" value="Comment" class="btn btn-primary">
+                </form>
+                    </div>
+                 {{/each}}
                 </div>
             </div>
             <!-- End of Middle Collumn -->
