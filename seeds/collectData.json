@@ -1,26 +1,26 @@
 [
     {
-        "collectName": "Nick",
+        "collectName": "Nick Playful ",
         "content": "Nick's Wonderful World of NFT's",
-        "imageTag": "./images/img1.png",
+        "imageTag": "imgs/img2.png",
         "userId": 1
     },
     {
-        "collectName": "Michael",
+        "collectName": "Michael Monkeys",
         "content": "Michael's Explosive NFT's",
-        "imageTag": "./images/img2.png",
+        "imageTag": "https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600",
         "userId": 2
     },
     {
-        "collectName": "Amar",
+        "collectName": "Old Time Amar",
         "content": "Amar's Impressive NFT Collection",
-        "imageTag": "./images/img3.png",
+        "imageTag": "imgs/img3.png",
         "userId": 3
     },   
     {
-        "collectName": "Phil",
+        "collectName": "Phil Unseen Skies",
         "content": "Phil's NFT Collection has grown",
-        "imageTag": "./images/img4.png",
+        "imageTag": "imgs/img4.jpg",
         "userId": 4
     }
 ]
