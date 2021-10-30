@@ -17,7 +17,7 @@ router.get("/feed", withAuth, async (req, res) => {
   }
 });
 
-router.get('/',  async (req, res) => {  
+router.get('/feed',  async (req, res) => {  
   try {
       const newCollect = await Collect.findAll({});
             const collects = newCollect.map(collect => collect.get({ plain: true}));
