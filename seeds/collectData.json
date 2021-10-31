@@ -2,7 +2,7 @@
     {
         "collectName": "Nick Playful ",
         "content": "Nick's Wonderful World of NFT's",
-        "imageTag": "imgs/img2.png",
+        "imageTag": "img2.png",
         "userId": 1
     },
     {
@@ -14,13 +14,13 @@
     {
         "collectName": "Old Time Amar",
         "content": "Amar's Impressive NFT Collection",
-        "imageTag": "imgs/img3.png",
+        "imageTag": "img3.png",
         "userId": 3
     },   
     {
         "collectName": "Phil Unseen Skies",
         "content": "Phil's NFT Collection has grown",
-        "imageTag": "imgs/img4.jpg",
+        "imageTag": "img4.jpg",
         "userId": 4
     }
 ]

@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const withAuth = require("../utils/auth");
-const { Collect, User, Comment } = require('../models');
+const { Collect, User, Comment } = require("../models");
 
 // router.get("/feed", withAuth, async (req, res) => {
 //   try {
@@ -11,7 +11,7 @@ const { Collect, User, Comment } = require('../models');
 //       scripts: [{ script: "index.js" }, { script: "logout.js" }],
 //       logged_in: req.session.logged_in,
 //     });
-    
+
 //   } catch (err) {
 //     res.status(500).json(err);
 //   }
@@ -21,7 +21,7 @@ const { Collect, User, Comment } = require('../models');
 //     const newCollect = await Collect.findAll({
 //       // include:[
 //       //    {
-//       //      model: Comment, 
+//       //      model: Comment,
 //       //     //  attributes: ['comment', 'dateCreated','userId','CollectId'],
 //       //       required: false
 //       //     },
@@ -49,45 +49,44 @@ const { Collect, User, Comment } = require('../models');
 //   }
 // })
 
-router.get('/feed', withAuth,  async (req, res) => {  
-
+router.get("/feed", withAuth, async (req, res) => {
   try {
     const collects = await Collect.findAll({
-    
-        include: [
-          {
-            model: User,
-            attributes: ['userName'],
-            required: true
-        }, {
+      include: [
+        {
+          model: User,
+          attributes: ["userName"],
+          required: true,
+        },
+        {
           model: Comment,
-          attributes: ['content'],
-           required: false
-         },
-        ],
-        nest:true,
-        raw:true
+          attributes: ["content"],
+          required: false,
+        },
+      ],
+      nest: true,
+      raw: true,
     });
-    console.log(collects)
+    console.log(collects);
     // const collects = newCollect.map(collect => collect.get({ plain: true }));
 
-    res.render('feed', {
+    res.render("feed", {
       collects,
-       title: "feed",
-       style: "feed.css",
-       exStyle: "https://unicons.iconscout.com/release/v2.1.6/css/unicons.css",
-       scripts: [{ script: "index.js" }, { script: 'logout.js' }],
-       user_id:req.session.user_id
+      title: "feed",
+      style: "feed.css",
+      exStyle: "https://unicons.iconscout.com/release/v2.1.6/css/unicons.css",
+      scripts: [{ script: "index.js" }, { script: "logout.js" }],
+      user_id: req.session.user_id,
     });
     // console.log(collects);
   } catch (err) {
     res.status(500).json(err);
   }
-})
+});
 
- router.get("/", (req, res) => {
-   res.redirect("/feed");
- });
+router.get("/", (req, res) => {
+  res.redirect("/feed");
+});
 
 router.get("/login", (req, res) => {
   // if (req.session.logged_in) {
@@ -101,7 +100,6 @@ router.get("/login", (req, res) => {
     scripts: [{ script: "login.js" }],
   });
 });
-
 
 router.get("/signup", (req, res) => {
   res.render("signup", {
