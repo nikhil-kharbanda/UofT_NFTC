@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const withAuth = require("../utils/auth");
-const { Collect, User, Comment } = require('../models');
+const { Collect, User, Comment } = require("../models");
+
 
 router.get('/feed', withAuth,  async (req, res) => {  
 
@@ -28,17 +29,15 @@ router.get('/feed', withAuth,  async (req, res) => {
        exStyle: "https://unicons.iconscout.com/release/v2.1.6/css/unicons.css",
        scripts: [{ script: "index.js" }, { script: 'logout.js' }],
        user_id: req.session.user_id
-    
-    });
-    //  console.log(req.session.user_id);
-  } catch (err) {
-    res.status(500).json(err);
+    })
+  }catch(err){
+    res.status(400).json(err)
   }
 })
-
- router.get("/", (req, res) => {
-   res.redirect("/feed");
- });
+    
+router.get("/", (req, res) => {
+  res.redirect("/feed");
+});
 
 router.get("/login", (req, res) => {
   // if (req.session.logged_in) {
@@ -52,7 +51,6 @@ router.get("/login", (req, res) => {
     scripts: [{ script: "login.js" }],
   });
 });
-
 
 router.get("/signup", (req, res) => {
   res.render("signup", {
