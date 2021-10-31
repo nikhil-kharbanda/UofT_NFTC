@@ -48,49 +48,7 @@ app.get("/profile", (req, res) => {
     script: "index.js"
   });
 });
-// app.use(routes);
 
-
-// app.get('/', (req, res) => {
-//   console.log('hi there')
-//   connection.query('SELECT * FROM user WHERE id = 1', (err, rows) => {
-//       console.log(rows)
-//       if (err) {
-//           console.log(err)
-         
-//       }
-//       res.render('/', { rows });
-//   });
-// });
-
-
-// app.post('/', (req, res) => {
-//   let sampleFile;
-//   let uploadPath;
-
-//   if (!req.files || Object.keys(req.files).length === 0) {
-//       return res.status(400).send('No files were uploaded.');
-//   }
-
-//   // name of the input is sampleFile
-//   sampleFile = req.files.sampleFile;
-//   uploadPath = __dirname + '/upload/' + sampleFile.name;
-
-//   console.log(sampleFile);
-
-//   // Use mv() to place file on the server
-//   sampleFile.mv(uploadPath, function (err) {
-//       if (err) return res.status(500).send(err);
-
-//       connection.query('UPDATE user SET image_tag = ? WHERE id =1', [sampleFile.name], (err, rows) => {
-//           if (!err) {
-//               res.redirect('/');
-//           } else {
-//               console.log(err);
-//           }
-//       });
-//   });
-// });
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
