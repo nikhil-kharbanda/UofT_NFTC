@@ -21,7 +21,8 @@ router.get('/feed', withAuth,  async (req, res) => {
           required: false,
           include:[
             {model:User,
-            attributes:['userName']}      
+            attributes:['userName'],
+          required:false}      
         ]
       },
         ],
