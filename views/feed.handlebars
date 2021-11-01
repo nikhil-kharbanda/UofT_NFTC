@@ -95,7 +95,7 @@
                         <p><b>{{data.collectName}} by {{user.userName}} </b> {{data.content}} {{user_id.id}}<span
                                 class="harsh-tag">#mynft</span></p>
                                 {{#each data.comments as |comment|}}
-                           <p>{{comment.content}} by {{comment.user.userName}}</p> 
+                           <p>{{comment.content}} - <b>{{comment.user.userName}}</b></p> 
                            {{/each}} 
 
                     </div>
