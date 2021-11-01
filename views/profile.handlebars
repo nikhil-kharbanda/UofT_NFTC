@@ -54,7 +54,7 @@
 
             <!-- MIDDLE -->
             <div class="middle">
-                <h2>@NFTGuy's Profile</h2>
+                <h2>{{user.userName}}'s Profile</h2>
                 <!--Posts-->
                 <div class="feeds">
                     <div class="feed">
@@ -88,51 +88,9 @@
                         </div>
 
                         <div class="caption">
-                            <p><b>NFT Billionaire</b> Lorem ipsum dolor sit quisquam eius. <span class="harsh-tag">#mynft</span></p>
-                        </div>
-                        <form class="create-post">
-                    <div class="profile-photo">
-                    <img src="https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600">
+                        <p><b>{{data.collectName}} by {{user.userName}} </b> {{data.content}} <span</p>
+                        <p><b>{{user.userName}}</b> - {{data.comments.content}}</p>
                     </div>
-                    <input type="text" placeholder="Type your comment" id="create-post">
-                    <input type="submit" value="Comment" class="btn btn-primary">
-                </form>
-                    </div>
-                </div>
-                <div class="feeds">
-                    <div class="feed">
-                        <div class="head">
-                            <div class="user">
-                                <div class="profile-photo">
-                                    <img src="https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600">
-                                </div>
-                                <div class="ingo">
-                                    <h3>@NFTGuy</h3>
-                                    <small>5 MINUTES AGO</small>
-                                </div>
-                            </div>
-                            <span class="edit">
-                                <i class="uil uil-ellipsis-h"></i>
-                            </span>
-                        </div>
-
-                        <div class="photo">
-                            <img src="https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600">
-                        </div>
-
-                        <div class="action-buttons">
-                            <div class="interaction-buttons">
-                                <span><i class="uil uil-heart"></i></span>
-                                <span><i class="uil uil-comment-dots"></i></span>
-                            </div>
-                        </div>
-                        <div class="liked-by">
-                            <p>Liked by 2,323 users</b></p>
-                        </div>
-
-                        <div class="caption">
-                            <p><b>NFT Billionaire</b> Lorem ipsum dolor sit quisquam eius. <span class="harsh-tag">#mynft</span></p>
-                        </div>
                         <form class="create-post">
                     <div class="profile-photo">
                     <img src="https://lh3.googleusercontent.com/MS8DTHZQAGoPeU0Ob1cyrsArl04dp7BtWF1GB39d4nRqJKZKkEpJ_QR6MNBqWK89-Yta6RdBnw4xEbAjiQ4VAx_zsiewA11vNHyP_A=w600">
@@ -146,15 +104,6 @@
             <!-- End of Middle Collumn -->
 
             <!-- RIGHT  -->
-            <div class="right">
-                <div class="messages">
-                    <!-- SEARCH BAR -->
-                    <div class="search-bar">
-                        <input type="" placeholder="" id="message-search">
-                    </div>
-                </div>
-
-                </div>
             </div>
 
         </div>
