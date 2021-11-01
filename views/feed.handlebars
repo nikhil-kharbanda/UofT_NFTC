@@ -67,8 +67,8 @@
                                 <img src="{{data.imageTag}}" "{{user_id.name}}" > 
 
                             </div>
-                            <div class="ingo">
-                                <h3>{{user.UserName}}</h3>
+                            <div>
+                                <h3>{{user.userName}}</h3>
                                 <small>{{data.collectName}} on {{format_date data.dateCreated}}</small>
 
                             </div>
@@ -90,18 +90,21 @@
                             <span><i class="uil uil-comment-dots"></i></span>
                         </div>
                     </div>
-                    <div class="liked-by">
-                        <p>Liked by 2,323 users</b></p>
-                    </div>
                     <div class="caption">
-                        <p><b>{{data.collectName}} by {{user.userName}} </b> {{data.content}} {{user_id.id}}<span
-                                class="harsh-tag">#mynft</span></p>
+
+                        <p><b>{{data.collectName}} by {{user.userName}} </b> {{data.content}} <span</p>
+                        <p><b>{{user.userName}}</b> - {{data.comments.content}}</p>
                     </div>
                     <form class="create-post" id = 'create-comment'>
                         <div class="profile-photo">
                             <img src="https://www.kindpng.com/picc/m/451-4517876_default-profile-hd-png-download.png">
                         </div>
                         <input type="text" placeholder="Type your comment" id="create-comment">
+
+                        <input type="submit" value="Comment" class="btn btn-primary">
+                        {{!-- {{comments.content}} --}}
+                        
+
                         <button data-collectid="{{data.id}}" class= "commentBtn btn btn-primary">Comment</button> 
                         {{!-- <input type="button" value="comment" class="btn btn-primary" C> --}}
                         {{!-- <input type= "text" value = "{{data.collectId}}" class = "collectId" > --}}
@@ -109,6 +112,7 @@
                        {{#each data.comments as |comment|}}
                         <p>{{comment.content}}</p>
                         {{/each}}
+
                     </form>
                 </div>
                 {{/each}}
@@ -133,8 +137,9 @@
                             <span id="file-name-file">None</span>
                         </span>
                         <br>
-                        <textarea type="textarea" name="description" id="textDesc"
-                            placeholder="Type Description Here"></textarea>
+                        <textarea type="textarea" name="description" id="textDesc" placeholder="Type Description Here"></textarea>
+                        <hr>
+                        <textarea type="textarea" name="description" id="uploadTitle" placeholder="Insert Title"></textarea>
                         <br>
                         <input type="submit" class="btn btn-primary">
 
