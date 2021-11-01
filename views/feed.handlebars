@@ -92,8 +92,12 @@
                     </div>
                     <div class="caption">
 
-                        <p><b>{{data.collectName}} by {{user.userName}} </b> {{data.content}} <span</p>
-                        <p><b>{{user.userName}}</b> - {{data.comments.content}}</p>
+                        <p><b>{{data.collectName}} by {{user.userName}} </b> {{data.content}} {{user_id.id}}<span
+                                class="harsh-tag">#mynft</span></p>
+                                {{#each data.comments as |comment|}}
+                           <p>{{comment.content}} by {{comment.user.userName}}</p> 
+                           {{/each}} 
+
                     </div>
                     <form class="create-post" id = 'create-comment'>
                         <div class="profile-photo">
@@ -109,10 +113,8 @@
                         {{!-- <input type="button" value="comment" class="btn btn-primary" C> --}}
                         {{!-- <input type= "text" value = "{{data.collectId}}" class = "collectId" > --}}
                        
-                       {{#each data.comments as |comment|}}
+                       {{!-- {{#each data.comments as |comment|}}
                         <p>{{comment.content}}</p>
-                        {{/each}}
-
                     </form>
                 </div>
                 {{/each}}
