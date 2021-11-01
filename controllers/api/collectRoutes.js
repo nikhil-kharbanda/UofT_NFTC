@@ -10,17 +10,6 @@ router.post("/", async (req, res) => {
   //the file from the body of the request(amar's upload function)
   //pass the ide from the params
 
-  //   const variable = await Collect.create({
-  //     title: req.body.title,
-  //     content: req.body.content,
-  //     user_id: req.session.user_id,
-  //   })
-  //     .then((dbPostData) => res.json(dbPostData))
-  //     .catch((err) => {
-  //       console.log(err);
-  //       res.status(500).json(err);
-  //     });
-
   console.log(req.body);
   console.log(req.files.sampleFile.name);
 
@@ -31,7 +20,7 @@ router.post("/", async (req, res) => {
     if (err) return res.status(500).send(err);
     try {
       const dbPostData = await Collect.create({
-        collectName: "GENERIC TITLE",
+        collectName: "TITLE",
         content: req.body.description,
         userId: req.session.user_id.id,
         imageTag: finalImg,
