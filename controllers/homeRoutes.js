@@ -1,27 +1,37 @@
 const router = require("express").Router();
 const withAuth = require("../utils/auth");
 const { Collect, User, Comment } = require("../models");
+const { sequelize } = require("../models/User");
 
 
 router.get('/feed', withAuth,  async (req, res) => {  
 
   try {
-    const collects = await Collect.findAll({
-    
-        include: [
-          {
-            model: User,
-            attributes: ['userName'] ,
-            required: true
-        }, {
-          model: Comment,
-          attributes: ['content','collectId'],
-          required: false
+    const collectsData = await Collect.findAll({
+      include: [
+       
+ 
+       {
+          model: User,
+          attributes: ['userName', 'id'] ,
+          required: true    
          },
+         { model: Comment, 
+          attributes: ['content','collectId', 'userId', 'id'],
+          required: false,
+          include:[
+            {model:User,
+            attributes:['userName']}      
+        ]
+      },
         ],
-        nest:true,
-        raw:true
     });
+
+
+    const collects= collectsData.map(collect=>collect.get({plain:true}))
+console.log(collects)
+console.log(collects[0].comments)
+
     res.render('feed', {
       collects,
        title: "feed",
@@ -30,10 +40,13 @@ router.get('/feed', withAuth,  async (req, res) => {
        scripts: [{ script: "index.js" }, { script: 'logout.js' }],
        user_id: req.session.user_id
     })
-  }catch(err){
-    res.status(400).json(err)
+
+
+
+  } catch (err) {
+    res.status(400).json(err);
   }
-})
+});
     
 router.get("/", (req, res) => {
   res.redirect("/feed");
