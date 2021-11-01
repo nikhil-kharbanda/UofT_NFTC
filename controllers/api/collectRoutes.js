@@ -20,7 +20,7 @@ router.post("/", async (req, res) => {
     if (err) return res.status(500).send(err);
     try {
       const dbPostData = await Collect.create({
-        collectName: "TITLE",
+        collectName: req.body.uploadTitle,
         content: req.body.description,
         userId: req.session.user_id.id,
         imageTag: finalImg,
