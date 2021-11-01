@@ -117,18 +117,6 @@ nav .container {
     padding: var(--search-padding);
 }
 
-.search-bar input[type="search"] {
-    background: transparent;
-    width: 30vw;
-    margin-left: 1rem;
-    font-size: 0.9rem;
-    color: var(--color-dark);
-}
-
-nav .search-bar input[type="search"]::placeholder {
-    color: var(--color-gray);
-}
-
 nav .create {
     display: flex;
     align-items: center;
@@ -307,7 +295,6 @@ main .container .right {
 input[type="file"]{
     display: none;
 }
-
 #fileBtnLabel {
     display: inline-block;
     padding: 10px 3px;
@@ -323,21 +310,40 @@ input[type="file"]{
 }
 
 #file-name {
-    padding-left: 3px;
+    padding-left: 6px;
     font-size: 0.9em;
     
 }
 
+#uploadTitle {
+    padding-top: 10px;
+    resize: none;
+    background-color: var(--color-light);
+    padding-left: 6px;
+}
+
+#uploadTitle::placeholder{
+    font-family: "Poppins", sans-serif;
+}
+
 #textDesc {
-    padding-left: 3px;
+    padding-left: 6px;
     background-color: var(--color-light);
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     resize: none;
 }
 
 #textDesc::placeholder{
     font-family: "Poppins", sans-serif;
+}
+
+hr {
+    height:2px;
+    border-width:0;
+    color:gray;
+    background-color:gray;
+    margin: 0px 6px;
 }
 
 /* THEME CUSTOMIZATION  */
@@ -549,7 +555,7 @@ input[type="file"]{
     }
 
     main .container .right {
-        /* display: inline-flex; */
+        display: none;
     }
 
     .theme .card {
