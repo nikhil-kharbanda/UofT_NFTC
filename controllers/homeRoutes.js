@@ -44,6 +44,7 @@ console.log(collects[0].comments)
 
 
   } catch (err) {
+    console.log('is this here?')
     res.status(400).json(err);
   }
 });
