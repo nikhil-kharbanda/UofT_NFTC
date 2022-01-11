@@ -8,28 +8,12 @@
 
   In this project, we created an "Instagram" for collectable NFT's
 
-## User Case
+### User Case
 
 AS AN interested collector of NFT’s  
 I WANT to see posted NFT’s   
 I WANT to comment on other users NFT’s  
 I WANT to show my NFT collection  
-
-## Criteria
-
-GIVEN an interested collector of NFT’s  
-IF I have an account  
-I SHOULD be able to login  
-IF I click “upload post”   
-I SHOULD be able to select an image from my device, chose a title, and write a description.  
-IF I press submit after adding everything   
-I SHOULD see my post on the feed with other users’ posts  
-IF I log out  
-I SHOULD be redirected to the login page where I can login again with correct credentials
-IF I don't have an account   
-I SHOULD be able to sign up for an account that saves my info to the DB, then redirects me to the feed timeline  
-IF I am not signed in  
-I SHOULD NOT be able to access the feed timeline  
 
 ## Table of Contents
   - [Description](#description)
@@ -41,7 +25,23 @@ I SHOULD NOT be able to access the feed timeline
   - [Video Link](#video)  
 
 ## Installation
-  This project can be run via Heroku (https://nftc-collect.herokuapp.com/), or by cloning this repo and installing all the dependencies (npm i bcrypt connect-session-sequelize dotenv express express-fileupload express-handlebars express-session fileupload init mysql2 nodemon sequelize), and also by creating a .env file and setting up you database in the workbench
+
+### Clone Repository
+
+git clone https://github.com/herokuapp/HotSpot.git
+ 
+### Install Dependencies
+
+All NPM packages required for this application (Express, Compression, Mongoose, Lite-Server and Morgan) are already listed as dependencies in the package.json file. Run the command 'npm i' command in your terminal at the root directory level to install the packages.
+Ensure you have Node.js installed on your machine. The application will be invoked by entering node server.js in the command line.
+
+Create an .env file containing the database name, your sql username and password. Initialize your database by running the "schema.sql" file with MySQL
+
+You can run the project by entering into terminal: "npm start"
+
+### Start Application
+
+You will see App running on port 3001! in the console. You can then view the app on http://localhost:3001/.
 
 ## Purpose
   To use the technology we learned in part 1 and part 2 of the coding bootcamp
@@ -50,7 +50,7 @@ I SHOULD NOT be able to access the feed timeline
   npm run seeds, then npm run start for local run. Use the link (https://nftc-collect.herokuapp.com/) to run the app itself
 
 ## Contributing
-  Phil Tantsidis, Amar Algu, Michael D
+  Phil Tantsidis, Amar Algu
 
 ## Video
   n/a
