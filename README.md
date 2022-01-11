@@ -28,7 +28,7 @@ I WANT to show my NFT collection
 
 ### Clone Repository
 
-git clone https://github.com/herokuapp/HotSpot.git
+git clone https://github.com/nikhil-kharbanda/UofT_NFTC
  
 ### Install Dependencies
 
