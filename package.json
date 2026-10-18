@@ -19,13 +19,12 @@
     "express-fileupload": "^1.2.1",
     "express-handlebars": "^5.3.4",
     "express-session": "^1.17.2",
-    "fileupload": "^1.0.0",
+    "fileupload": "^0.2.1",
     "init": "^0.1.2",
-    "mysql2": "^2.3.2",
+    "mysql2": "^3.24.6",
     "nodemon": "^2.0.14",
     "sequelize": "^6.8.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nikhil-kharbanda/UofT_NFTC.git"
